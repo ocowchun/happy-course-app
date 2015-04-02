@@ -1,0 +1,11 @@
+<%= form_for @course do |f| %>
+
+課程名稱<%= f.text_field :name%>
+
+授課老師 <%= f.text_field :teacher%>
+上課地點 <%= f.text_field :classroom%>
+上課時間 <%= f.text_field :time%>
+學分數 <%= f.text_field :credit%>
+
+<%= f.submit%>
+<% end %>
