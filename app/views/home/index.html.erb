@@ -1,8 +1,14 @@
 <h2>課程查詢系統</h2>
 <%= link_to "New Course", new_course_path %>
 
+<%=form_tag root_path,method:"get" do%>
+name <%=text_field_tag :name%>
+<%=submit_tag "search"%>
+<%end%>
+
 <div>
   <%@courses.each do |course|%>
   <%=course.name%>
+  <%= link_to "Edit Course", edit_course_path(course) %>
   <%end%>
 </div>

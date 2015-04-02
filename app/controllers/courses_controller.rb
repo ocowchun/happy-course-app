@@ -18,7 +18,11 @@ class CoursesController < ApplicationController
   end
 
   def update
-
+    if @course.update(course_params)
+      redirect_to root_path
+    else
+      render :update
+    end
   end
 
   private
